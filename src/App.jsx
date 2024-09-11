@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      {/* <main> */}
+      <main>
         <div className="container">
           <div className="balance">
               <div className="inner-balance">
@@ -72,7 +72,7 @@ function App() {
               </div>
           </div>
         </div>
-      {/* </main> */}
+      </main>
     </>
   )
 }
