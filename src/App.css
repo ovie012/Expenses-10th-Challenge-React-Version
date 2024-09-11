@@ -1,0 +1,265 @@
+@font-face {
+  font-family:'DM Sans';
+  src: url(../DMSans-VariableFont_opsz\,wght.ttf) format(truetype),
+       url(../DMSans-Italic-VariableFont_opsz\,wght.ttf) format(truetype);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: hsl(27, 66%, 92%);
+}
+
+.container {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.balance {
+  width: 95%;
+  height: 65px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(10, 79%, 65%);
+}
+
+.inner-balance {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.text {
+  height: 67%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text p {
+  font-size: 0.6rem;
+  opacity: 0.7;
+  word-spacing: 1px;
+}
+
+.text h2 {
+  font-size: 1.1rem;
+}
+
+.circles {
+  height: 45%;
+  width: auto;
+  animation: roll 15s 5s infinite;
+}
+
+@keyframes roll {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  5% {
+      transform: rotate(180deg);
+  }
+
+  10% {
+      transform: rotate(360deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+
+  /* 10% {
+      transform: rotate(3600deg);
+  }
+
+  100% {
+      transform: rotate(3600deg);
+  } */
+}
+
+.circles img {
+  width: 100%;
+  height: 100%;
+}
+
+.chart {
+  width: 95%;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: hsl(33, 100%, 98%);
+}
+
+.inner-chart {
+  width: 85%;
+  height: 85%;
+  /* margin-top: -15%; */
+  /* background: red; */
+}
+
+.major-chart {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+
+.major-chart h2 {
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.chart-section {
+  height: 80%;
+  /* background-color: red; */
+  /* margin-bottom: 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+
+.days-bars {
+  width: 10%;
+  text-align: center;
+  /* position: relative; */
+  /* background-color: red; */
+}
+
+.bars {
+  display: flex;
+  /* width: 50%; */
+  justify-content: space-between;
+  position: relative;
+  /* background-color: blue; */
+}
+
+.bars h6 {
+  opacity: 0.4;
+  margin-top: 5px;
+  cursor: pointer;
+  /* position: relative; */
+  position: absolute;
+  bottom: 0;
+}
+
+.bars span {
+  display: block;
+  /* height: 100px; */
+  /* height: 50px; */
+  width: 10%;
+  background: hsl(10, 79%, 65%);
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  margin-left: -3px;
+}
+
+.bars span:hover,
+.bars span:active {
+  cursor: pointer;
+  background: hsla(10, 79%, 65%, 0.7);
+}
+
+.days-bars p {
+  /* text-align: center; */
+  padding: 6px 0;
+  width: 14%;
+  /* width: 40px; */
+  height: 25px;
+  background: #000;
+  color: hsla(33, 100%, 98%, 0.9);
+  font-size: 0.6rem;
+  font-weight: 800;
+  border-radius: 3px;
+  margin-left: -10px;
+  position: absolute;
+  top: -45px;
+  display: none;
+  /* margin-top: -100px; */
+}
+
+.days-bars:hover > p,
+.days-bars:active > p {
+  display: block;
+}
+
+.today span {
+  background: hsl(186, 34%, 60%);
+  transition: 0.2s ease-in-out;
+}
+
+.today span:hover,
+.today span:active {
+  background: hsla(186, 34%, 60%, 0.7);
+}
+
+.last-line {
+  width: 85%;
+  height: 1px;
+  background: hsla(0, 0%, 22%, 0.2);
+  margin-top: -15%;
+}
+
+.total-expense {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.this-month h6 {
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+
+.this-month h2 {
+  font-size: 1.6rem;
+}
+
+.last-month h6 {
+  margin-top: 15px;
+  text-align: end;
+}
+
+.last-month h2 {
+ font-size: 0.6rem;
+ opacity: 0.5;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+      width: 65%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+      width: 90%;
+  }
+}
